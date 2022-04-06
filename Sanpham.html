@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./GBB.css">
-    <link rel="stylesheet" href="./Wax.css">
+    <link rel="stylesheet" href="./sanpham.css">
      <script src="https://kit.fontawesome.com/9a6d25af5b.js" crossorigin="anonymous"></script> 
 </head>
 <body>
@@ -16,13 +16,11 @@
                  <img src="https://cdn.glitch.global/9e7b5ace-9aa1-48cf-b461-f5e944cdf76f/261161121_100714979122532_8724520511518983581_n.jpg?v=1648477606836">
             </div>
             <div class="search">
-                <div  class="input-search"> 
-                    <input id="input" placeholder="Tìm kiếm sản phẩm">
-                    <label for="input" id="show_product-search">
-                    
-                    </label>
-                </div>
+                <div class="input-search"><input placeholder="Tìm kiếm sản phẩm"></input></div>
                 <div class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="show_product-search">
+                    
+                </div>
             </div>
             <ul id="option">
                 <li class="item"><a href="GBB.html" class="item">Trang chủ</a></li>
@@ -36,10 +34,7 @@
                         <li class="DM__item"><a href="Accessory.html" class="">Phụ kiện</a></li>
                     </ul>
                 </li>
-                <!-- <li><a href="Box.html" class="item">Hộp hoa</a></li> -->
-                <!-- <li><a href="Socola.html" class="item">Socola</a></li>
-                <li><a href="Accessory.html" class="item">Phụ kiện</a></li>        -->
-                <li class="item">Giỏ hàng
+                <li class="item">
                     <a href="Payment.html" id="cart">
                         <i class="fa-solid fa-bag-shopping"></i>
                     </a> 
@@ -47,49 +42,45 @@
             </ul>    
         </div>
     </div>
-    <div id="container">
-        <div class="wrapper ">
-            <div class="row">
-                <div class="category">
-                    <div class="nav__list">
-                        <div class="collection-categories">
-                            <h3>Danh Mục Menu</h3>
-                        </div>
-                        <div class="panel">
-                            <ul class="panel-list">
-                                <li class="panel-item" >
-                                    <a id="five"  href="">Hoa gấu</a>
-                                </li>
-                                <li class="panel-item">
-                                    <a href="">Gấu bông</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="list-product">
-                    <div class="nav__product">
-                        <h2>Hoa nhũ</h2>
-                        <div class="arrange">
-                            <p>Sắp xếp theo</p>
-                            <select name="" id="select__arrange">
-                                <option value="0">--Chọn--</option>
-                                <option value="1">Giá cao đến thấp</option>
-                                <option value="2">Giá thấp đến cao</option>
-                            </select>
-                        </div>
-                    </div>
-                   <div class="item-products">
-                    <div class="row" id="grid__row"> 
-                        
-                        
-                      </div>
-                   </div> 
-                </div>
-            </div>
-       </div>      
+    <div id="contain">
+         <div class="wrap">
+             <div class="show-product">
+                 <div class="product-image">
+                     <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/273861212_344242180996914_2657993674402297569_n.png?stp=dst-png_p160x160&_nc_cat=104&ccb=1-5&_nc_sid=aee45a&_nc_ohc=b9tADwuUhM0AX9XqVUk&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVIBZiADDldiZteEs-L-KMFBjjFjpvj32MTiwNJMQzdbRg&oe=6267456C" alt="">
+                 </div>
+                 <div class="slide__show"></div>
+                 <div class="product-information">
+                     <h1>Bó 40 bông </h1>
+                     <div class="status">
+                         <div class="cate ">Mặt hàng :
+                             <a href=""></a>
+                         </div>
+                         <div class="separate" >|</div>
+                         <div class="stt">Tình trạng :
+                             <span>Còn hàng</span>
+                            </div>
+                     </div>
+                     <div class="Price">
+                        <h2></h2>
+                     </div>
+                     <div class="amount">
+                         <p>Số lượng :</p>
+                         <div class="minus__plus">
+                             <div class="minus">-</div>
+                             <div class="text">1</div>
+                             <div class="plus">+</div>
+                         </div>
+                     </div>
+                     <div class="option">
+                         <a href="">
+                           <button class="option__add-to-cart">Thêm vào giỏ hàng</button>
+                         </a>
+                      
+                     </div>
+                 </div>
+             </div>
+         </div>
     </div>
-    <!--Footer-->
     <div id="footer">
         <p class="quote">Liên hệ với chúng tôi:</p>
         <div class="contact-link">
@@ -102,7 +93,7 @@
             <p>© Bản quyền thuộc về Gift By Boo</p>           
         </div>
     </div>
+    <script src="sanpham.js"></script>
     <script src="./search.js"></script>
-    <script src="./Bear.js"></script>
 </body>
 </html>

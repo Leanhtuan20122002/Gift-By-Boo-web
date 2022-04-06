@@ -1,62 +1,114 @@
-/* Navbar's CSS*/
-* {
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: cursive, Helvetica, sans-serif;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-}
-
-#navbar {
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-}
-
-.navbar {
-    background-color: rgb(243, 193, 202);
-    width: 100%;
-    height: 110px;
-    font-size: 23px;
-    position: sticky;
-    top: 0px;
-    left: 0px;
-    display: flex;
-    justify-content:flex-start;
-    flex-direction: row;
-    list-style-type: none;
-}
-
-.item{
-    margin: 20px 10px 23px 70px;
-    padding: 10px; 
-}
-
-.navbar img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    margin: 4px 0 23px 80px; 
-}
-
-.navbar i {
-    margin: 20px 50px 23px 70px;
-    padding: 10px;
-}
-
-
-/* Container's CSS */
+/* Container's css */
 #container {
-    width:100%;
-    height:6800px;
+    margin-top: 140px;
+    max-height: 6800px;
 }
-
-
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -17px; 
+    margin-right: -17px; 
+}
+.wrapper{
+    width: 1225px;
+    padding: 0;
+    margin: 0 auto;
+}
+.nav__list{
+    position: sticky;
+    top: 140px;
+    background: #f9f9f9;
+    
+}
+.category{
+    width: 20%;
+    padding: 0 17px;
+}
+.collection-categories{
+    height: 60px;
+    background: #f3c1ca;
+    line-height: 60px
+}
+.panel,
+.collection-categories{
+    padding-left: 10px;
+}
+.panel-list{
+    list-style: none;
+    margin-top: 5px;
+}
+.panel-item{
+  padding: 5px 0;
+  
+  overflow: hidden;
+}
+.panel-item a{
+    position: relative;
+    right: 0;
+    transition: right linear 0.1s;
+}
+.list-product{
+    width: 80%;
+    padding: 0 17px;
+}
+.nav__product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid;
+}
+.arrange{
+    display: flex;
+    align-items: center;
+}
+select{
+    height: 30px; 
+    outline: none;
+    margin-left: 10px;
+}
+.item-product{
+     width: 25%; 
+     padding: 0 17px; 
+     margin: 15px 0; 
+}
+.detail__product{
+    border-radius: 5px;
+    overflow: hidden;
+}
+.detail__img{
+    overflow: hidden;
+    height: 305px;
+}
+.img-product{
+    width: 100%;
+    height:290px;
+    object-fit: cover;
+    transition: 0.6s;
+}
+.Information{
+    padding: 20px 10px;
+}
+/* hover */
+.item-product:hover .img-product{
+   transform: scale(1.05);
+}
+.name{
+    height: 44px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.item-product:hover .detail__product{
+    box-shadow: 0px 1px 7px rgb(0 0 0 / 35%);
+}
+.price{
+    display: flex;
+    justify-content: end;
+}
+.panel-item a:hover{
+    right: -4px;
+    color: #f3c1ca;
+}
 
 /* Footer's CSS */
 #footer {
@@ -78,8 +130,7 @@ a{
     text-align: center;
     padding: 10px 0px;
 }
-
-.contact-link a {
+.contact-link a{
     padding: 0px 10px 5px 0px;
 }
 

@@ -5,21 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Accessory.css">
+    <link rel="stylesheet" href="Wax.css">
     <script src="https://kit.fontawesome.com/9a6d25af5b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="navbar">
-        <ul class="navbar">
-            <a href="GBB.html" style="width:65%"><li><img src="https://scontent.fhan15-2.fna.fbcdn.net/v/t39.30808-6/261161121_100714979122532_8724520511518983581_n.png?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=b_fGw5vG8YMAX9lQHEV&_nc_oc=AQmV92qa5XYOCMDQdZjd1Km3UUnYsQabmmH9_iGdvKyafi4Gcj3eZIF6gVNpV7w_7pjVb7uAiHm7Kip6ETdyuAfq&tn=JFs5w7wpG2J1sXpq&_nc_ht=scontent.fhan15-2.fna&oh=00_AT-irqoPgSHzY12cr7lG5YVhrp05JeuxUp4bu_1-BzjZ5g&oe=6231DF57"></li></a>
-            <a href="Wax.html" class="item" style="width:35%"><li>Hoa sáp</li></a>
-            <a href="Emulsion.html" class="item" style="width:35%"><li>Hoa nhũ</li></a>
-            <a href="Bear.html" class="item" style="width:35%"><li>Hoa gấu</li></a>
-            <a href="Box.html" class="item" style="width:35%"><li>Hộp hoa</li></a>
-            <a href="Socola.html" class="item" style="width:35%"><li>Socola</li></a> 
-            <a href="Accessory.html" class="item" style="width:35%"><li>Phụ kiện</li></a>          
-            <a href="Payment.html" class="pay"><li><i class="fa-solid fa-bag-shopping"></i></li></a>
+        <a id="logo" href="GBB.html">
+            <img src="https://scontent.fhan15-2.fna.fbcdn.net/v/t39.30808-6/261161121_100714979122532_8724520511518983581_n.png?_nc_cat=111&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=7F9GkLoVPkkAX9iRdat&_nc_oc=AQlT3hWst8GvkLy4vzxn0yU7lGIk_F7rnmnOqmhbAbrWQTk3UleGSuDZ-3-a37UYWOGSVf_AIlgqA67u6waiGkHv&tn=JFs5w7wpG2J1sXpq&_nc_ht=scontent.fhan15-2.fna&oh=00_AT-LToXB3yqYNfnjc4VHLI-kMaqq8zZO7BP_307Jos7yGA&oe=623FB717">
+        </a>
+        <ul id="option">
+            <li><a href="Wax.html" class="item">Hoa sáp</a></li>
+            <li><a href="Emulsion.html" class="item">Hoa nhũ</a></li>
+            <li><a href="Bear.html" class="item">Hoa gấu</a></li>
+            <li><a href="Box.html" class="item">Hộp hoa</a></li>
+            <li><a href="Chocolate.html" class="item">Chocolate</a></li>
+            <li><a href="Accessory.html" class="item">Phụ kiện</a></li>       
         </ul>
+        <a href="Payment.html" id="cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+        </a>     
     </div>
+  
+    <div id="container">
+        <div class="wrapper ">
+            <div class="row">
+                <div class="category">
+                    <div class="nav__list">
+                        <div class="collection-categories">
+                            <h3>Danh Mục Sản Phẩm</h3>
+                        </div>
+                        <div class="panel">
+                            <ul class="panel-list">                                
+                                <li class="panel-item" >
+                                    <a id="five"  href="">Thiệp</a>
+                                </li>
+                                <li class="panel-item">
+                                    <a href="">Vương miện</a>
+                                </li>
+                                <li class="panel-item">
+                                    <a href="">Đèn led</a>
+                                </li>
+                                <li class="panel-item">
+                                    <a href="">Topper</a>
+                                </li>
+                                <li class="panel-item">
+                                    <a href="">Túi hoa</a>
+                                </li>                              
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-product">
+                    <div class="nav__product">
+                        <h2>Phụ Kiện</h2>
+                        <div class="arrange">
+                            <p>Sắp xếp theo</p>
+                            <select name="" id="select__arrange">
+                                <option value="0">--Chọn--</option>
+                                <option value="1">Giá cao đến thấp</option>
+                                <option value="2">Giá thấp đến cao</option>
+                            </select>
+                        </div>
+                    </div>
+                   <div class="item-products">
+                    <div class="row" id="grid__row"> 
+                        
+                        
+                      </div>
+                   </div> 
+                </div>
+            </div>
+       </div>      
+    </div>
+    <!--Footer-->
+    <div id="footer">
+        <p class="quote">Liên hệ với chúng tôi:</p>
+        <div class="contact-link">
+            <a href="https://www.facebook.com/giftbyboo"><i class="fab fa-facebook-square"></i> Facebook</a>
+            <a href="https://www.instagram.com/giftbyboo/"><i class="fab fa-instagram-square"></i> Instagram</a>
+            <a href="https://mail.google.com/mail/u/0/#inbox"><i class="fa-solid fa-at"></i>Email</a>
+            <a href="#"><i class="fa-solid fa-phone-volume"></i>0961252746</a>
+        </div>
+        <div style="text-align: left">
+            <p>© Bản quyền thuộc về Gift By Boo</p>           
+        </div>
+    </div>
+    <script src="Accessory.js"></script>
 </body>
 </html>
