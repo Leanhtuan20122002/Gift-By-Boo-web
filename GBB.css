@@ -9,173 +9,13 @@ a{
   text-decoration: none;
   color: black;
 }
-.header{
-  background-color: rgb(243, 193, 202);
-  position: sticky;
-  top: 0px;
-  left: 0px;
-  height: 90px;
-  z-index:10;
-}
-#navbar {
-  width: 1225px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
 
-#logo {
-  height: 90px;
-}
-
-#logo img {
-  border-radius: 50%;
-  width: clamp(60px, 10vw, 90px);
-  height: clamp(60px, 10vw, 90px);
-}
-.search{
-  height: 40px;
-  background: white;
-  display: flex;
-  align-items: center;
-  padding-right: 5px;
-  border-radius: 22px;
-  position: relative;
-  margin-right:213px;
-}
-.input-search{
-  height: 34px;
-  background: white;
-  line-height: 36px;
-  padding-right: 25px;
-  margin-left: 22px;
-  position: relative;
-}
-input{
-  outline: none;
-  border: none;
-  width: 234px;
-}
-
-.btn-search{
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: #f3c1ca;
-  text-align: center;
-  line-height: 34px;
-}
-#show_product-search{
-  position: absolute;
-  top: calc(100% + 5px);
-  border-radius: 10px;
-  left: -20px;
-  width: 320px;
-  max-height: 251px;
-  overflow: auto;
-  background: white;
-  box-shadow: 0 1px 12px rgb(100,100,100);
-}
-#show_product-search::-webkit-scrollbar{
-  width: 6px;
-  background: gray;
-  border-radius: 5px;
-}
-#show_product-search::-webkit-scrollbar-thumb{
-  background-color: #f3c1ca;
-  border-radius: 5px;
-}
-.search-link{
-  display: flex;
-  align-items: center;
-  padding-left: 10px;
-}
-.search-link:hover{
-  background: #e4e4e4;
-}
-.search-img{
-  display: flex;
-    align-items: center;
-    padding: 5px 0;
-}
-.search-img img{
-  width: 60px;
-  height: 60px;
-}
-.price_name{
-  flex: 1;
-  margin-left: 20px;
-}
-#option {
-  /* flex: 80%; */
-  height: 90px;
-  font-size: 23px;
-  line-height: 90px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  list-style-type: none;
-}
-
-option li {
-  font-size: clamp(17px, 2.5vw, 23px);
-  padding: 7px;
-}
-.item{
-  position: relative;
-  cursor: pointer;
-  padding: 0 25px;
-}
-.item:hover{
-  background: rgba(219, 137, 152, 1);
-}
-.DM__list::after{
-  content: '';
-  width: 150px;
-  height: 32px;
-  background: transparent;
-  position: absolute;
-  top: -30px;
-  left: 0;
-}
-.DM__list{
-  position: absolute;
-  top: 90px;
-  left: 0;
-  line-height: 20px;
-  list-style: none;
-  box-shadow: 0 10px 10px rgb(0 0 0 / 50%);
-  width: 170px;
-  background: white;
-  display: none;
-  font-size: 20px;
-  padding: 5px 10px;
-}
-.DM__item{
-  padding: 5px 0;
-}
-.DM__item a{
-  text-decoration: none;
-}
-.DM__item a:hover{
-  color: rgb(243, 193, 202);
-}
-.item:hover .DM__list{
-  display: block;
-}
-#cart {
-  flex: 10%;
-  text-align: center;
-  font-size: 25px;
-}
 /* Container's CSS */
 #container {
   max-width: 100%;
   text-align: center;
+  padding-bottom: 15px;
 }
-
 /* Slideshow's css */
 .mySlides {
   display: none;
@@ -185,18 +25,17 @@ option li {
   border-radius: 8px 8px 8px 8px;
   border: 1px solid rgb(243, 193, 202);
 }
-
 .slideshow-container {
   max-width: 1380px;
+  max-height: 1000px;
   position: relative;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
 }
-
 .dot {
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 10px 0 2px 0;
   background-color: black;
   border-radius: 50%;
   display: inline-block;
@@ -219,43 +58,32 @@ option li {
 
 @media only screen and (max-width: 300px) {
 .text {font-size: 11px}
+.prev, .next,.text {font-size: 11px}
+}
+
+.btn {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+  padding: 20px 0 30px 0;
+}
+	
+.more_btn {
+	text-decoration: none;
+	color: rgb(243, 193, 202);
+	border: 2px solid rgb(243, 193, 202);
+	padding: 10px 18px;
+	border-radius: 15px;
+	font-size: 1.6rem;
+}
+	
+
+.more_btn:hover {
+	background-color:rgb(243, 193, 202);
+	color:white;
 }
 
 
 
-/* Footer's CSS */
-#footer {
-  background-color: rgb(243, 193, 202);
-  text-align: center;
-  width: 100%;
-  height: 150px;  
-}
-
-.contact-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 20px;  
-}
-
-.quote {
-  font-size: 20px;
-  text-align: center;
-  padding: 10px 0px;
-}
-
-.contact-link a{
-    padding: 0px 10px 5px 0px;
-}
-
-.contact-link a:hover {
-  transition-duration: 0.5s;
-  transform: translate(0px, 10px);
-}
-
-#footer i {
-  margin: 20px 40px 23px 70px;
-  padding: 5px;
-}
 
 

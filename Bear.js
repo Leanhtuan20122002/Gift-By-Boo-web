@@ -1,10 +1,11 @@
-let product2=localStorage.getItem('product2')
-  let product= JSON.parse(product2)
-  let grid_row=document.getElementById('grid__row')
+let grid_row=document.getElementById('grid__row')
   let five=document.querySelectorAll('.panel-item')
   let nav_product_h2=document.querySelector('.nav__product h2')
   let select_arrange=document.getElementById('select__arrange')
   let options=document.querySelectorAll('option')
+  let product=Allproduct.filter((element,index)=>{
+    return 34<=index&&index<40
+  })
 function lowtohigh(objProduct){
     let htmls= objProduct.sort((a,b)=>(a.price>b.price)?1:-1)
     render(htmls)
@@ -24,14 +25,17 @@ function lowtohigh(objProduct){
  
   function render(productss){
      let html= productss.map(function(pr){
-         return `<a class="item-product" href="./sanpham.html?name=${pr.type}">
+         return `<a class="item-product" href="./Sanpham.html?name=${pr.type}">
          <div class="detail__product">
              <div class="detail__img">
                 <img src="${pr.img}" alt="" class="img-product">
              </div>
              <div class="Information">
              <div class="name">${pr.name}</div>
-                 <div class="price"><span>${pr.price}</span></div>
+                 <div class="price"><span>${new Intl.NumberFormat('it-IT', {
+           style: 'currency',
+          currency: 'VND'
+         }).format(pr.price)}</span></div>
              </div>
          </div>
          </a>`

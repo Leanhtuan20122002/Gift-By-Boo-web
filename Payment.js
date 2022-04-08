@@ -1,31 +1,23 @@
-let mobile_option_open = document.getElementById("mobile_option_open");
-let mobile_option_bar = document.getElementById("mobile_option_bar");
+let cart_items = document.getElementById("cart_items");
+let ListCart = JSON.parse(localStorage.getItem("ListCart"));
 
-let overlay = document.getElementById("overlay");
-overlay.addEventListener("click", () => {
-    mobile_option_bar.style.transform = "translateX(100%)";
-    mobile_option_open.checked = false;
-    overlay.style.display = "none";
-});
+console.log(ListCart);
 
-let mobile_option_bar__close = document.getElementById("mobile_option_bar--close");
-mobile_option_bar__close.addEventListener("click", () => {
-    mobile_option_bar.style.transform = "translateX(100%)";
-    mobile_option_open.checked = false;
-    overlay.style.display = "none";
-});
-
-mobile_option_open.addEventListener("click", () => {
-    console.log(mobile_option_open.checked);
-    if(mobile_option_open.checked == true) {
-        mobile_option_bar.style.transform = "translateX(0%)";
-        overlay.style.display = "block";
-    } else {
-        mobile_option_bar.style.transform = "translateX(100%)"
-    }
-});
-
-
-
-
-
+ListCart.forEach(function(pr) {
+    console.log(pr);
+    console.log(pr.soluong)
+    let html = `<li class="cart_items_list">
+    <div class="li_name">
+        <p>${pr.name}</p>
+    </div>
+    <div class="li_soluong">
+        <button><i class="fa-solid fa-minus"></i></button>
+        <p>${pr.soluong}</p>
+        <button><i class="fa-solid fa-plus"></i></button>
+    </div>
+    <div class="li_delete">
+        <button><i class="fa-solid fa-trash-can"></i></button>
+    </div>
+    </li>`
+    cart_items.insertAdjacentHTML("beforeend", html);
+})

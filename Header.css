@@ -137,7 +137,10 @@
 }
 
 .item:hover {
+    width: 150px;
+    height: 35px;
     background: rgba(219, 137, 152, 1);
+    border-radius: 8px 8px 8px 8px;
 }
 
 .DM__list::after {

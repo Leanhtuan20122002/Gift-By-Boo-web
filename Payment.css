@@ -59,7 +59,8 @@ a {
     padding: 0.5em;
     border: 1px solid gray;
     border-radius: 5px;
-    color: rgb(94, 94, 94);
+/*     color: rgb(94, 94, 94); */
+    color: black;
     
 }
 
@@ -93,15 +94,59 @@ a {
     font-size: 20px;
 }
 
+/* List sản phẩm */
+
 #cart_items{
     overflow-y: scroll;
     height: clamp(200px, 35vw, 550px);
     padding: 5px;
 }
 
-#cart_items li {
+.cart_items_list {
     padding: 5px;
     border-bottom: 1px solid gray;
+    display: flex;
+    height: 5em;
+}
+
+.li_name {
+    display: flex;
+    align-items: center;
+    flex: 70%;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.li_soluong {
+    flex: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+.li_soluong button {
+    width: 17px;
+    height: 17px;
+    font-size: 10px;
+}
+
+.li_delete {
+    flex: 15%;
+    padding: 5px;
+    min-width: 30px;
+}
+
+.li_delete button {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: white;
+}
+
+.li_delete button:hover {
+    background-color: rgb(255, 196, 196);
 }
 
 #coupon {
@@ -148,58 +193,12 @@ a {
     border-radius: 12px 12px 12px 12px;
 }
 
-/* Footer */
 
-#footer {
 
-}
 
-.shop_contact {
-    display: flex;
-    justify-content: space-around;
-    gap: 3em;
-    flex-wrap: wrap;
-    background-color: rgb(255, 255, 255);
-    padding: 1em;
-    border: 2px solid rgb(243, 193, 202);
-}
 
-.contact {
-    display: flex;
-}
 
-.phone_icon {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    color: rgb(218, 0, 0);
-}
-
-.number {
-    color: rgb(218, 0, 0);
-}
-
-.link {
-    font-size: 20px;
-    transition: all 0.3s ease-in-out;
-}
-.link:hover {
-    transform: translateX(-10px);
-}
-
-.fa-facebook-square {
-    color: rgb(55, 55, 139);
-}
-
-.fa-instagram-square {
-    color: rgb(112, 33, 74);
-}
-
-.shop_info {
-    background-color: rgb(243, 193, 202);
-    padding: 1em;
-}
-
+/* Responsive */
 
 @media only screen and (max-width: 620px) {
     #container {

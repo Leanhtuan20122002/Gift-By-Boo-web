@@ -2,16 +2,11 @@ let input_search=document.querySelector('input')
 let result_search=document.querySelector('#show_product-search')
 let ip_search=document.querySelector('.input-search')
 let search=document.querySelector('.search')
-let Product1=localStorage.getItem('product')
-let Product_1= JSON.parse(Product1)
-let Product2=localStorage.getItem('product1')
-let Product_2= JSON.parse(Product2) 
-let P_roduct=Product_1.concat(Product_2)
+let Allproduct=JSON.parse(localStorage.getItem('Allproducts'))
 input_search.oninput=function(){
     let value_search=input_search.value.trim()
     let Product_search;
-    console.log(P_roduct)
-    let html=P_roduct.filter(element => {
+    let html=Allproduct.filter(element => {
        return (element.name).includes(value_search)
     });
     console.log(html)
@@ -25,7 +20,7 @@ input_search.oninput=function(){
          render1(Product_search)
      }
 }
-
+//show sản phẩm
 function render1(Product_search){
   let html=  Product_search.map(Ps => {
         return `<a class="search-link" href="./Sanpham.html?type=${Ps.type}">
@@ -34,15 +29,20 @@ function render1(Product_search){
     </div>
     <div class="price_name">
         <div class="na_me">${Ps.name}</div>
-        <div class="pri_ce">${Ps.price}</div>
+        <div class="pri_ce">${new Intl.NumberFormat('it-IT', {
+           style: 'currency',
+          currency: 'VND'
+         }).format(Ps.price)}</div>
     </div>
         </a>`
     });
     result_search.innerHTML=html.join('')
 }
+//sự kiện focus vào input
 input_search.onfocus=function(){
      result_search.style.display='block'
  }
+//blur ra khỏi input
 window.onclick=function(e){
     if (!result_search.contains(e.target) && !input_search.contains(e.target))
     result_search.style.display = 'none';

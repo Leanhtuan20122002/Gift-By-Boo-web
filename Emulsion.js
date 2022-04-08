@@ -1,10 +1,11 @@
-let product1=localStorage.getItem('product1')
-let product= JSON.parse(product1)
 let grid_row=document.getElementById('grid__row')
 let five=document.querySelectorAll('.panel-item')
 let nav_product_h2=document.querySelector('.nav__product h2')
 let select_arrange=document.getElementById('select__arrange')
 let options=document.querySelectorAll('option')
+let product=Allproduct.filter((element,index)=>{
+    return 24<=index&&index<34
+  })
 function lowtohigh(objProduct){
     let htmls= objProduct.sort((a,b)=>(a.price>b.price)?1:-1)
     render(htmls)
@@ -31,7 +32,10 @@ function lowtohigh(objProduct){
              </div>
              <div class="Information">
              <div class="name">${pr.name}</div>
-                 <div class="price"><span>${pr.price}</span></div>
+                 <div class="price"><span>${new Intl.NumberFormat('it-IT', {
+           style: 'currency',
+          currency: 'VND'
+         }).format(pr.price)}</span></div>
              </div>
          </div>
          </a>`
@@ -41,17 +45,17 @@ function lowtohigh(objProduct){
  five.forEach(function(five_element,index){
      five_element.addEventListener('click',function(e){
          switch(index){
-             case 0: nav_product_h2.innerText='Bó 7 bông'
+             case 0: nav_product_h2.innerText='Hoa nhũ 7 bông'
              break;
-             case 1: nav_product_h2.innerText='Bó 10 bông'
+             case 1: nav_product_h2.innerText='Hoa nhũ 10 bông'
              break;
-             case 2: nav_product_h2.innerText='Bó 19 bông'
+             case 2: nav_product_h2.innerText='Hoa nhũ 19 bông'
              break;
-             case 3: nav_product_h2.innerText='Bó 20 bông'
+             case 3: nav_product_h2.innerText='Hoa nhũ 20 bông'
              break;
-             case 4: nav_product_h2.innerText='Bó 40 bông'
+             case 4: nav_product_h2.innerText='Hoa nhũ 40 bông'
              break;
-             case 5: nav_product_h2.innerText='Bó 50 bông'
+             case 5: nav_product_h2.innerText='Hoa nhũ 50 bông'
              break;
          }
           e.preventDefault()
