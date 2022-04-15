@@ -1,7 +1,6 @@
 /* Container's css */
 #container {
     margin-top: 65px;
-    max-height: 6800px;
 }
 .row{
     display: flex;
@@ -10,7 +9,7 @@
     margin-right: -17px; 
 }
 .wrapper{
-    width: 1225px;
+    max-width: 1320px;
     padding: 0;
     margin: 0 auto;
 }
@@ -21,14 +20,20 @@
     
 }
 .category{
-    width: 20%;
+    flex: 20%;
     padding: 0 17px;
 }
 .collection-categories{
-    height: 60px;
+    height: fit-content;
     background: #f3c1ca;
-    line-height: 60px
+    line-height: 40px;
+    padding: 20px;
 }
+
+.collection-categories h3 {
+    font-size: clamp(13px, 2vw, 20px);
+}
+
 .panel,
 .collection-categories{
     padding-left: 10px;
@@ -48,7 +53,7 @@
     transition: right linear 0.1s;
 }
 .list-product{
-    width: 80%;
+    flex: 80%;
     padding: 0 17px;
 }
 .wide{
@@ -71,14 +76,22 @@ select{
     outline: none;
     margin-left: 10px;
 }
+
+.pd_row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .item-product{
-     width: 25%; 
-     padding: 0 17px; 
-     margin: 15px 0; 
+    width: 25%;
+    padding: 0 17px; 
+    margin: 15px 0; 
 }
+
 .item-product_wide{
-  width:20%;
+    width: 20%;
 }
+
 .detail__product{
     border-radius: 5px;
     overflow: hidden;
@@ -101,10 +114,12 @@ select{
    transform: scale(1.05);
 }
 .name{
-    height: 44px;
+    height: 50px;
     text-align: center;
     margin-bottom: 15px;
+    overflow: hidden;
 }
+
 .item-product:hover .detail__product{
     box-shadow: 0px 1px 7px rgb(0 0 0 / 35%);
 }
@@ -115,5 +130,42 @@ select{
 .panel-item a:hover{
     right: -4px;
     color: #f3c1ca;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 720px) {
+
+    #container {
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+
+    .row {
+        display: block;
+        max-width: 720px;
+    }
+
+    .nav__list {
+        display: flex;
+        top: 0;
+        align-items: center;
+        border: 1px solid #f3c1ca;
+        padding: 5px;
+    }
+
+    .collection-categories {
+        flex: 20%;
+    }
+
+    .panel {
+        flex: 80%;
+    }
+  
+    .item-product {
+      width: fit-content;
+        flex: 25%;
+    }
+
 }
 
